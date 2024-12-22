@@ -1,6 +1,5 @@
 import React from 'react';
 
-// Keep your existing calculate duration function
 export function calculateDuration(
   startDate: string,
   showMonths: boolean
@@ -21,57 +20,63 @@ export function calculateDuration(
   }
 }
 
-// Styled Timeline components
-export const Timeline: React.FC<{ children: React.ReactNode }> = ({ children }) => {
+// Timeline component with display name
+const TimelineComponent: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   return (
     <div className="max-w-3xl mx-auto p-6">
-      <div className="relative space-y-8 before:absolute before:inset-0 before:ml-5 before:h-full before:w-0.5 before:bg-gray-200">
+      <div className="relative space-y-8 before:absolute before:inset-0 before:ml-5 before:h-full before:w-0.5 before:bg-gray-600">
         {children}
       </div>
     </div>
   );
 };
+TimelineComponent.displayName = 'Timeline';
+export const Timeline = TimelineComponent;
 
-export const TimelineEvent: React.FC<{ children: React.ReactNode }> & {
-  Title: React.FC<{ children: React.ReactNode }>;
-  Description: React.FC<{ children: React.ReactNode }>;
-} = ({ children }) => {
+// TimelineEvent component with display name
+const TimelineEventComponent: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   return (
-    <div className="relative flex gap-6 items-start">
+    <div className="relative flex gap-6 items-start group">
       <div className="flex items-center justify-center">
-        <div className="h-3 w-3 rounded-full bg-blue-900 ring-4 ring-white" />
+        <div className="h-3 w-3 rounded-full bg-blue-900 ring-4 ring-white/10 group-hover:ring-white/20 transition-all" />
       </div>
       <div className="flex-1 space-y-2">{children}</div>
     </div>
   );
 };
+TimelineEventComponent.displayName = 'TimelineEvent';
 
-TimelineEvent.Title = ({ children }) => (
-  <h3 className="text-lg font-semibold text-white">{children}</h3>
+// Title component with display name
+const TimelineEventTitle: React.FC<{ children: React.ReactNode }> = ({ children }) => (
+  <h3 className="text-lg font-semibold text-white/90 group-hover:text-white transition-colors">
+    {children}
+  </h3>
 );
+TimelineEventTitle.displayName = 'TimelineEvent.Title';
 
-TimelineEvent.Description = ({ children }) => (
-  <div className="text-white rounded-lg p-4 prose prose-sm max-w-none">
+// Description component with display name
+const TimelineEventDescription: React.FC<{ children: React.ReactNode }> = ({ children }) => (
+  <div className="text-white/80 rounded-lg p-4 prose prose-sm max-w-none hover:text-white/90 transition-colors">
     {React.Children.map(children, child => {
       if (React.isValidElement(child)) {
         if (child.type === 'ul') {
           return React.cloneElement(child as React.ReactElement, {
-            className: 'space-y-2 mt-3 text-white'
+            className: 'space-y-3 mt-3 text-white/80'
           });
         }
         if (child.type === 'li') {
           return React.cloneElement(child as React.ReactElement, {
-            className: 'flex items-start gap-2 text-white'
+            className: 'flex items-start gap-2 text-white/80 hover:text-white/90'
           });
         }
         if (child.type === 'h4') {
           return React.cloneElement(child as React.ReactElement, {
-            className: 'text-sm font-semibold  mt-4 mb-2 text-white'
+            className: 'text-sm font-semibold mt-4 mb-2 text-white/90'
           });
         }
         if (child.type === 'p') {
           return React.cloneElement(child as React.ReactElement, {
-            className: 'text-white'
+            className: 'text-white/90'
           });
         }
       }
@@ -79,8 +84,15 @@ TimelineEvent.Description = ({ children }) => (
     })}
   </div>
 );
+TimelineEventDescription.displayName = 'TimelineEvent.Description';
 
-// Your existing CurrentTimeLineExp component remains exactly the same
+// Compose the TimelineEvent component with its sub-components
+export const TimelineEvent = Object.assign(TimelineEventComponent, {
+  Title: TimelineEventTitle,
+  Description: TimelineEventDescription
+});
+
+// Export the CurrentTimeLineExp component
 const CurrentTimeLineExp = () => {
   return (
     <Timeline>
