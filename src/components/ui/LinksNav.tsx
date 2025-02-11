@@ -22,12 +22,12 @@ export const navItemsSelected: { [key: string]: NavItemHeaderAnimation } = {
     y: -3,
     w: '75px'
   },
-  '/blog': {
-    name: 'Blog',
-    x: 209,
-    y: -3,
-    w: '50px'
-  }
+  // '/blog': {
+  //   name: 'Blog',
+  //   x: 209,
+  //   y: -3,
+  //   w: '50px'
+  // }
 };
 
 const LinksNav = () => {
@@ -45,7 +45,7 @@ const LinksNav = () => {
               key={path}
               href={path}
               className={clsx(
-                'hidden lg:inline-block transition ease hover:text-neutral-200 py-[2px] px-[10px]',
+                'hidden lg:inline-block transition ease hover:text-neutral-200 py-[2px] px-[9px]',
                 {
                   'text-neutral-500': !isActive,
                   'font-bold': isActive,

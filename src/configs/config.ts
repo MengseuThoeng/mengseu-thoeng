@@ -30,12 +30,12 @@ export const siteConfig: {
     form_id:'https://formspree.io/f/myzynpbr',
     social: {
         email: 'mengseu2004@gmail.com',
-        twitter: '@Mengseu_Thoeng',
-        github: 'MengseuThoeng',
+        twitter: 'https://x.com/Mengseu_Thoeng',
+        github: 'https://github.com/MengseuThoeng',
         linkedin: 'https://www.linkedin.com/in/thoeng-mengseu-273b9b312/',
         blog: '',
-        medium: '',
-        dev: '',
+        medium: 'https://medium.com/@mengseu2004',
+        dev: 'https://dev.to/thoeng_mengseu',
         hashnode: '',
     },
     metadata: {

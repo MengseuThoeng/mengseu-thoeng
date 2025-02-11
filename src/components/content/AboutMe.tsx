@@ -15,7 +15,7 @@ const AboutMe = () => {
         experimenting, and creating small projects. Over the years, this passion
         has grown into a career as a Full Stack developer, where I continue to
         build innovative solutions that solve real-world problems. */}
-        Hey there! 👋 My name is Thoeng Mengseu, but you can call me Reki. I’m a 20-year-old Software Engineering enthusiast with a lifelong passion for technology. My love for coding started when I was around 12 or 13 years old, and it has grown into a core part of who I am. From exploring the latest tech gadgets to building innovative solutions, I thrive on creativity and problem-solving.
+        Hey there! 👋 My name is Thoeng Mengseu, but you can call me Reki. I’m a 21-year-old Software Engineering enthusiast with a lifelong passion for technology. My love for coding started when I was around 12 or 13 years old, and it has grown into a core part of who I am. From exploring the latest tech gadgets to building innovative solutions, I thrive on creativity and problem-solving.
       </p>
 
       <p className="text-base text-gray-400 mt-4">

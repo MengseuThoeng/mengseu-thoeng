@@ -44,7 +44,7 @@ const Footer = () => {
             About
           </Link>
 
-          <Link
+          {/* <Link
             href="/projects"
             className="flex items-center gap-2 text-gray-500 hover:text-gray-600 transition ease"
           >
@@ -61,7 +61,7 @@ const Footer = () => {
               />
             </svg>
             Projects
-          </Link>
+          </Link> */}
         </div>
 
         <div className="flex flex-col space-y-4">
@@ -123,7 +123,7 @@ const Footer = () => {
             </svg>
             Dev.to
           </ExternalLink>
-          <ExternalLink href={siteConfig.social.hashnode}>
+          {/* <ExternalLink href={siteConfig.social.hashnode}>
             <svg
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 24 24"
@@ -133,7 +133,7 @@ const Footer = () => {
               <path d="M3 3h18v18H3V3zm2 2v14h14V5H5zm7 2a1 1 0 011 1v4h4a1 1 0 110 2h-4v4a1 1 0 11-2 0v-4H7a1 1 0 110-2h4V8a1 1 0 011-1z" />
             </svg>
             Hashnode
-          </ExternalLink>
+          </ExternalLink> */}
         </div>
 
         <div className="flex flex-col space-y-4">
@@ -151,7 +151,7 @@ const Footer = () => {
             </svg>
             Projects
           </Link>
-          <Link
+          {/* <Link
             href="/blog"
             className="flex items-center gap-2 text-gray-500 hover:text-gray-600 transition ease"
           >
@@ -164,7 +164,7 @@ const Footer = () => {
               <path d="M10.75 16.82A7.462 7.462 0 0115 15.5c.71 0 1.396.098 2.046.282A.75.75 0 0018 15.06v-11a.75.75 0 00-.546-.721A9.006 9.006 0 0015 3a8.963 8.963 0 00-4.25 1.065V16.82zM9.25 4.065A8.963 8.963 0 005 3c-.85 0-1.673.118-2.454.339A.75.75 0 002 4.06v11a.75.75 0 00.954.721A7.506 7.506 0 015 15.5c1.579 0 3.042.487 4.25 1.32V4.065z" />
             </svg>
             Blog
-          </Link>
+          </Link> */}
 
           <Link
             href="#contactme"
