@@ -48,7 +48,6 @@ const ProjectsSection = () => {
           image: project.link, // Assuming this is the project image URL or screenshot
           keywords: project.topics.join(', '), // Assuming topics are tags
         },
-
       })),
     };
 
@@ -85,33 +84,38 @@ const ProjectsSection = () => {
           </p>
         </AnimationContainer>
 
-        {/* Search Input Section */}
+        {/* Search Input Section with LED effect */}
         <AnimationContainer customClassName="w-full group flex flex-col justify-center items-center mb-8">
-          <div className="w-full flex items-center lg:w-3/6 h-12 rounded-xl shadow-lg bg-black border border-gray-800 group-hover:border-gray-500 transition-all ease">
-            <div className="grid place-items-center h-full w-12 text-gray-500">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                className="h-6 w-6"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth="1"
-                  d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
-                />
-              </svg>
+          <div className="w-full lg:w-3/6 relative">
+            {/* LED running light container */}
+            <div className="absolute -inset-0.5 bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 rounded-xl opacity-75 blur-sm animate-led-run"></div>
+            
+            <div className="relative w-full flex items-center h-12 rounded-xl shadow-lg bg-black border border-gray-800 overflow-hidden z-10">
+              <div className="grid place-items-center h-full w-12 text-gray-500">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  className="h-6 w-6"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth="1"
+                    d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
+                  />
+                </svg>
+              </div>
+              <input
+                className="peer h-full w-full outline-none rounded text-sm text-white bg-black px-2 transition-all ease"
+                type="text"
+                id="search"
+                placeholder="Search projects (My Public Repo)"
+                value={projectSearch}
+                onChange={(e) => setProjectSearch(e.target.value)}
+              />
             </div>
-            <input
-              className="peer h-full w-full outline-none rounded text-sm text-white bg-black px-2 group-hover:border-gray-500 transition-all ease"
-              type="text"
-              id="search"
-              placeholder="Search projects (Languages, frameworks, libraries, etc...)"
-              value={projectSearch}
-              onChange={(e) => setProjectSearch(e.target.value)}
-            />
           </div>
         </AnimationContainer>
 

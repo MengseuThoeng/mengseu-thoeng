@@ -17,7 +17,7 @@ const Hero = () => {
         </h2>
       </AnimationContainer>
 
-      <AnimationContainer customClassName="w-[150px] sm:w-[250px] relative mb-6 lg:mb-0">
+      {/* <AnimationContainer customClassName="w-[150px] sm:w-[250px] relative mb-6 lg:mb-0">
         <Image
           alt={siteConfig.author} // Dynamic alt text
           height={300} // Increased height
@@ -27,6 +27,23 @@ const Hero = () => {
           priority
           className="rounded-[12px]  hover:grayscale-0 transition ease" // filter grayscale removed
         />
+      </AnimationContainer> */}
+      <AnimationContainer customClassName="w-[150px] sm:w-[250px] relative mb-6 lg:mb-0">
+        {/* LED effect container */}
+        <div className="absolute -inset-2 bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 rounded-[16px] animate-led-run opacity-75 blur-sm"></div>
+        
+        {/* Image container with relative positioning to appear above the LED effect */}
+        <div className="relative rounded-[12px] overflow-hidden">
+          <Image
+            alt={siteConfig.author}
+            height={300}
+            width={300}
+            src={siteConfig.profile_image}
+            sizes="30vw"
+            priority
+            className="rounded-[12px] filter grayscale hover:grayscale-0 transition ease bg-background/30 dark:bg-background/30"
+          />
+        </div>
       </AnimationContainer>
     </div>
   );

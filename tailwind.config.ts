@@ -105,7 +105,15 @@ const config: Config = {
         'fade-in-down-slow': 'fade-in-down 1s ease-out',
         'fade-in-up-slow': 'fade-in-up 1s ease-out',
         'fade-in-left-slow': 'fade-in-left 1s ease-out',
-        'fade-in-right-slow': 'fade-in-right 1s ease-out'
+        'fade-in-right-slow': 'fade-in-right 1s ease-out',
+        'led-run': 'ledRun 3s linear infinite',
+      },
+      keyframes: {
+        ledRun: {
+          '0%': { backgroundPosition: '0% 50%' },
+          '50%': { backgroundPosition: '100% 50%' },
+          '100%': { backgroundPosition: '0% 50%' },
+        },
       },
       variants: {
         extend: {

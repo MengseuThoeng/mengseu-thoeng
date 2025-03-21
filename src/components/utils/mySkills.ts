@@ -44,19 +44,63 @@
 export const skills = [
   {
     title: 'Programming Languages',
-    techs: ['Java', 'JavaScript', 'TypeScript', 'Python', 'C++', 'C#', 'Kotlin', 'PHP', 'Bash', 'CSS', 'HTML']
+    techs: [
+      'Java',
+      'JavaScript',
+      'TypeScript',
+      'Python',
+      'C++',
+      'C#',
+      'Kotlin',
+      'Bash',
+      'CSS',
+      'HTML'
+    ]
   },
   {
     title: 'Frameworks and Libraries',
-    techs: ['Spring Boot', 'Next.js', 'React', 'Redux', 'Tailwind CSS', 'Bootstrap', 'jQuery', 'Node.js']
+    techs: [
+      'Spring Boot',
+      'Next.js',
+      'React',
+      'Redux',
+      'Tailwind CSS',
+      'Bootstrap',
+      'jQuery',
+      'Node.js'
+    ]
+  },
+  {
+    title: 'Microservices & Messaging',
+    techs: ['Apache Kafka', 'Eureka', 'Spring Cloud Config', 'Vault']
   },
   {
     title: 'Tools and IDEs',
-    techs: ['IntelliJ IDEA', 'VS Code', 'Visual Studio', 'Android Studio', 'Netbeans', 'Figma', 'Git', 'GitHub', 'GitLab', 'Gradle', 'Docker']
+    techs: [
+      'IntelliJ IDEA',
+      'VS Code',
+      'Visual Studio',
+      'Android Studio',
+      'Netbeans',
+      'Figma',
+      'Git',
+      'GitHub',
+      'GitLab',
+      'Gradle',
+      'Docker'
+    ]
   },
   {
     title: 'Cloud Platforms and Hosting',
-    techs: ['AWS', 'Azure', 'GCP', 'Cloudflare', 'Firebase', 'Netlify', 'Vercel']
+    techs: [
+      'AWS',
+      'Azure',
+      'GCP',
+      'Cloudflare',
+      'Firebase',
+      'Netlify',
+      'Vercel'
+    ]
   },
   {
     title: 'Databases',
@@ -73,15 +117,5 @@ export const skills = [
   {
     title: 'Search & Caching',
     techs: ['Elasticsearch', 'Redis']
-  },
-  {
-    title: 'Microservices & Messaging',
-    techs: ['Apache Kafka', 'Eureka', 'Spring Cloud Config', 'Vault']
-  },
-  {
-    title: 'Frontend Editors',
-    techs: ['Tiptap']
   }
 ];
-
-

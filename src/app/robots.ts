@@ -14,8 +14,8 @@ export default function robots(): MetadataRoute.Robots {
       }
     ],
     sitemap: [
-      'https://muhammadfiaz.com/sitemap.xml', // First sitemap URL
-      'https://muhammadfiaz.com/sitemap-0.xml' // Second sitemap URL
+      'https://mengseu-thoeng.vercel.app/sitemap.xml', // First sitemap URL
+      'https://mengseu-thoeng.vercel.app/sitemap-0.xml' // Second sitemap URL
     ]
   };
 }

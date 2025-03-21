@@ -5,6 +5,7 @@ const GITHUB_TOKEN = process.env.GITHUB_TOKEN; // Retrieve the GitHub token from
 
 if (!GITHUB_TOKEN) {
   throw new Error('GitHub token is not defined in .env.local');
+  
 }
 
 export default async function handler(
@@ -14,7 +15,8 @@ export default async function handler(
   }
 ) {
   const { search } = req.query; // Get the search query from the URL (optional)
-
+  console.log(`Using GitHub username: ${GITHUB_USERNAME}`);
+  console.log(`GitHub API URL: https://api.github.com/users/${GITHUB_USERNAME}/repos`);
   try {
     const response = await fetch(
       `https://api.github.com/users/${GITHUB_USERNAME}/repos?sort=updated&per_page=100`,
@@ -25,8 +27,17 @@ export default async function handler(
       }
     );
 
+    // if (!response.ok) {
+    //   throw new Error('Failed to fetch repositories');
+    // }
     if (!response.ok) {
-      throw new Error('Failed to fetch repositories');
+      const errorData = await response.json().catch(() => ({}));
+      console.error('GitHub API error:', {
+        status: response.status,
+        statusText: response.statusText,
+        data: errorData
+      });
+      throw new Error(`Failed to fetch repositories: ${response.status} ${response.statusText}`);
     }
 
     const data = await response.json();

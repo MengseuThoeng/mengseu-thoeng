@@ -22,16 +22,17 @@ export const siteConfig: {
         type: string;
     };
 } = {
-    baseUrl: 'https://muhammadfiaz.com',
+    baseUrl: 'https://mengseu-thoeng.vercel.app/',
     author: 'Thoeng Mengseu',
     author_surname: 'Mengseu',
     titlePrefix: 'Thoeng Mengseu',
+    // profile_image: '/ACLEDA_Seu.jpg',
     profile_image: '/THOENG_MENGSEU.jpg',
     form_id:'https://formspree.io/f/myzynpbr',
     social: {
         email: 'mengseu2004@gmail.com',
         twitter: 'https://x.com/Mengseu_Thoeng',
-        github: 'https://github.com/MengseuThoeng',
+        github: 'MengseuThoeng',
         linkedin: 'https://www.linkedin.com/in/thoeng-mengseu-273b9b312/',
         blog: '',
         medium: 'https://medium.com/@mengseu2004',
