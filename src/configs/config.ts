@@ -27,7 +27,7 @@ export const siteConfig: {
     author_surname: 'Mengseu',
     titlePrefix: 'Thoeng Mengseu',
     // profile_image: '/ACLEDA_Seu.jpg',
-    profile_image: '/THOENG_MENGSEU.jpg',
+    profile_image: '/seu.jpg',
     form_id:'https://formspree.io/f/myzynpbr',
     social: {
         email: 'mengseu2004@gmail.com',
