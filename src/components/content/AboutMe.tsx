@@ -25,7 +25,7 @@ const AboutMe = () => {
         how much I learn, I always keep that same excitement and curiosity I had
         as a child, exploring new fields and technologies that push the
         boundaries of what’s possible. */}
-        I’m currently working on platforms like CodeAdvisors, a tool to help administrators at ISTAD manage student information more efficiently. My expertise includes Spring Boot microservices, Next.js with TypeScript, and a tech stack that leverages Kafka, PostgreSQL, MongoDB, and Elasticsearch. I’m all about creating scalable, impactful software that makes life easier.
+        {/* I’m currently working on platforms like CodeAdvisors, a tool to help administrators at ISTAD manage student information more efficiently. My expertise includes Spring Boot microservices, Next.js with TypeScript, and a tech stack that leverages Kafka, PostgreSQL, MongoDB, and Elasticsearch. I’m all about creating scalable, impactful software that makes life easier. */}
       </p>
 
       <p className="text-base text-gray-400 mt-4">
